@@ -61,7 +61,7 @@ public class EDTrabalho {
 
                         t = System.nanoTime() - t;
 
-                        System.out.println("Randomico cenário (1000) 0.000" + t / 100000 + "s (Bubble)");
+                        System.out.println("Randomico cenário (1000) " + t / 1000000000 + "s (Bubble)");
 
                         //Tempo para 10000
                         t = System.nanoTime();
@@ -70,7 +70,7 @@ public class EDTrabalho {
 
                         t = System.nanoTime() - t;
 
-                        System.out.println("Randomico cenário (10000) 0.000" + t / 100000 + "s (Bubble)");
+                        System.out.println("Randomico cenário (10000) " + t / 1000000000 + "s (Bubble)");
 
                         //Tempo para 500000
                         t = System.nanoTime();
@@ -78,7 +78,7 @@ public class EDTrabalho {
                         bubbleSort(array3);
 
                         t = System.nanoTime() - t;
-                        System.out.println("Randomico cenário (50000) 0.000" + t / 100000 + "s (Bubble)");
+                        System.out.println("Randomico cenário (50000) " + t / 1000000000 + "s (Bubble)");
 
                         //Tempo para 1000000
                         t = System.nanoTime();
@@ -86,7 +86,7 @@ public class EDTrabalho {
                         bubbleSort(array4);
 
                         t = System.nanoTime() - t;
-                        System.out.println("Randomico cenário (1000000) 0.000" + t / 100000 + "s (Bubble)");
+                        System.out.println("Randomico cenário (1000000) " + t / 1000000000 + "s (Bubble)");
 
                         //criação coleção ordenada
                         array1 = criarColecao(array1, 1000);
@@ -101,7 +101,7 @@ public class EDTrabalho {
 
                         t = System.nanoTime() - t;
 
-                        System.out.println("Melhor cenário (1000) 0.000" + t / 100000 + "s (Bubble)");
+                        System.out.println("Melhor cenário (1000) " + t / 1000000000 + "s (Bubble)");
 
                         //Tempo para 10000
                         t = System.nanoTime();
@@ -110,7 +110,7 @@ public class EDTrabalho {
 
                         t = System.nanoTime() - t;
 
-                        System.out.println("Melhor cenário (10000) 0.000" + t / 100000 + "s (Bubble)");
+                        System.out.println("Melhor cenário (10000) " + t / 1000000000 + "s (Bubble)");
 
                         //Tempo para 500000
                         t = System.nanoTime();
@@ -118,7 +118,7 @@ public class EDTrabalho {
                         bubbleSort(array3);
 
                         t = System.nanoTime() - t;
-                        System.out.println("Melhor cenário (50000) 0.000" + t / 100000 + "s (Bubble)");
+                        System.out.println("Melhor cenário (50000) " + t / 1000000000 + "s (Bubble)");
 
                         //Tempo para 1000000
                         t = System.nanoTime();
@@ -126,7 +126,7 @@ public class EDTrabalho {
                         bubbleSort(array4);
 
                         t = System.nanoTime() - t;
-                        System.out.println("Melhor cenário (1000000) 0.000" + t / 100000 + "s (Bubble)");
+                        System.out.println("Melhor cenário (1000000) " + t / 1000000000 + "s (Bubble)");
 
                         //reversão do Array para executar pior caso
                         Collections.reverse(array1);
@@ -141,7 +141,7 @@ public class EDTrabalho {
 
                         t = System.nanoTime() - t;
 
-                        System.out.println("Pior cenário (1000) 0.000" + t / 100000 + "s (Bubble)");
+                        System.out.println("Pior cenário (1000) " + t / 1000000000 + "s (Bubble)");
 
                         //Tempo para 10000
                         t = System.nanoTime();
@@ -150,7 +150,7 @@ public class EDTrabalho {
 
                         t = System.nanoTime() - t;
 
-                        System.out.println("Pior cenário (10000) 0.000" + t / 100000 + "s (Bubble)");
+                        System.out.println("Pior cenário (10000) " + t / 1000000000 + "s (Bubble)");
 
                         //Tempo para 500000
                         t = System.nanoTime();
@@ -158,7 +158,7 @@ public class EDTrabalho {
                         bubbleSort(array3);
 
                         t = System.nanoTime() - t;
-                        System.out.println("Pior cenário (50000) 0.000" + t / 100000 + "s (Bubble)");
+                        System.out.println("Pior cenário (50000) " + t / 1000000000 + "s (Bubble)");
 
                         //Tempo para 1000000
                         t = System.nanoTime();
@@ -166,12 +166,52 @@ public class EDTrabalho {
                         bubbleSort(array4);
 
                         t = System.nanoTime() - t;
-                        System.out.println("Pior cenário (1000000) 0.000" + t / 100000 + "s (Bubble)");
+                        System.out.println("Pior cenário (1000000) " + t / 1000000000 + "s (Bubble)");
 
 
                         break;
 
                     case 2:
+                        //criar coleção randomica
+                        array1 = randomico(array1, 1000);
+                        array2 = randomico(array2, 10000);
+                        array3 = randomico(array3, 500000);
+                        array4 = randomico(array4, 1000000);
+
+                        //Tempo para 1000
+                        t = System.nanoTime();
+
+                        selectionSort(array1);
+
+                        t = System.nanoTime() - t;
+
+                        System.out.println("Randomico cenário (1000) " + t / 1000000000 + "s (selectionSort)");
+
+                        //Tempo para 10000
+                        t = System.nanoTime();
+
+                        selectionSort(array2);
+
+                        t = System.nanoTime() - t;
+
+                        System.out.println("Randomico cenário (10000) " + t / 1000000000 + "s (selectionSort)");
+
+                        //Tempo para 500000
+                        t = System.nanoTime();
+
+                        selectionSort(array3);
+
+                        t = System.nanoTime() - t;
+                        System.out.println("Randomico cenário (50000) " + t / 1000000000 + "s (selectionSort)");
+
+                        //Tempo para 1000000
+                        t = System.nanoTime();
+
+                        selectionSort(array4);
+
+                        t = System.nanoTime() - t;
+                        System.out.println("Randomico cenário (1000000) " + t / 1000000000 + "s (selectionSort)");
+
                         //criação coleção ordenada
                         array1 = criarColecao(array1, 1000);
                         array2 = criarColecao(array2, 10000);
@@ -181,36 +221,77 @@ public class EDTrabalho {
                         //Tempo para 1000
                         t = System.nanoTime();
 
-                        SelectionSort(array1);
+                        selectionSort(array1);
 
                         t = System.nanoTime() - t;
 
-                        System.out.println("Melhor cenário (1000)" + t / 1000000000 + "s (SelectionSort)");
+                        System.out.println("Melhor cenário (1000) " + t / 1000000000 + "s (selectionSort)");
 
                         //Tempo para 10000
                         t = System.nanoTime();
 
-                        SelectionSort(array2);
+                        selectionSort(array2);
 
                         t = System.nanoTime() - t;
 
-                        System.out.println("Melhor cenário (10000)" + t / 1000000000 + "s (SelectionSort)");
+                        System.out.println("Melhor cenário (10000) " + t / 1000000000 + "s (selectionSort)");
 
                         //Tempo para 500000
                         t = System.nanoTime();
 
-                        SelectionSort(array3);
+                        selectionSort(array3);
 
                         t = System.nanoTime() - t;
-                        System.out.println("Melhor cenário (50000)" + t / 1000000000 + "s (SelectionSort)");
+                        System.out.println("Melhor cenário (50000) " + t / 1000000000 + "s (selectionSort)");
 
                         //Tempo para 1000000
                         t = System.nanoTime();
 
-                        SelectionSort(array4);
+                        selectionSort(array4);
 
                         t = System.nanoTime() - t;
-                        System.out.println("Melhor cenário (1000000)" + t / 1000000000 + "s (SelectionSort)");
+                        System.out.println("Melhor cenário (1000000) " + t / 1000000000 + "s (selectionSort)");
+
+                        //reversão do Array para executar pior caso
+                        Collections.reverse(array1);
+                        Collections.reverse(array2);
+                        Collections.reverse(array3);
+                        Collections.reverse(array4);
+
+                        //Tempo para 1000
+                        t = System.nanoTime();
+
+                        selectionSort(array1);
+
+                        t = System.nanoTime() - t;
+
+                        System.out.println("Pior cenário (1000) " + t / 1000000000 + "s (selectionSort)");
+
+                        //Tempo para 10000
+                        t = System.nanoTime();
+
+                        selectionSort(array2);
+
+                        t = System.nanoTime() - t;
+
+                        System.out.println("Pior cenário (10000) " + t / 1000000000 + "s (selectionSort)");
+
+                        //Tempo para 500000
+                        t = System.nanoTime();
+
+                        selectionSort(array3);
+
+                        t = System.nanoTime() - t;
+                        System.out.println("Pior cenário (50000) " + t / 1000000000 + "s (selectionSort)");
+
+                        //Tempo para 1000000
+                        t = System.nanoTime();
+
+                        selectionSort(array4);
+
+                        t = System.nanoTime() - t;
+                        System.out.println("Pior cenário (1000000) " + t / 1000000000 + "s (selectionSort)");
+
 
                     case 3:
                         //criação coleção ordenada
@@ -392,9 +473,24 @@ public class EDTrabalho {
 
     }
 
-    private static void SelectionSort(ArrayList<Integer> arrayR) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+    private static void selectionSort(ArrayList<Integer> arrayR) {
+        
+        
+        for (int i = 0; i < arrayR.size() - 1; i++) {
+			int minIndex = i;
+
+			for (int j = i + 1; j < arrayR.size(); j++) {
+				if (arrayR.get(j) < arrayR.get(minIndex)) {
+					minIndex = j;
+				}
+			}
+
+			int temp = arrayR.get(minIndex);
+                        arrayR.set(minIndex, arrayR.get(i));
+			arrayR.set(i, temp);
+		}
+	}
+    
 
     private static void MergeSort(ArrayList<Integer> array1) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
