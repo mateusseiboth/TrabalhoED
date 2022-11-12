@@ -46,6 +46,47 @@ public class EDTrabalho {
             } else {
                 switch (op) {
                     case 1:
+                        
+                        
+                        //criar coleção randomica
+                        array1 = randomico(array1, 1000);
+                        array2 = randomico(array2, 10000);
+                        array3 = randomico(array3, 500000);
+                        array4 = randomico(array4, 1000000);
+
+                        //Tempo para 1000
+                        t = System.nanoTime();
+
+                        bubbleSort(array1);
+
+                        t = System.nanoTime() - t;
+
+                        System.out.println("Randomico cenário (1000) 0.000" + t / 100000 + "s (Bubble)");
+
+                        //Tempo para 10000
+                        t = System.nanoTime();
+
+                        bubbleSort(array2);
+
+                        t = System.nanoTime() - t;
+
+                        System.out.println("Randomico cenário (10000) 0.000" + t / 100000 + "s (Bubble)");
+
+                        //Tempo para 500000
+                        t = System.nanoTime();
+
+                        bubbleSort(array3);
+
+                        t = System.nanoTime() - t;
+                        System.out.println("Randomico cenário (50000) 0.000" + t / 100000 + "s (Bubble)");
+
+                        //Tempo para 1000000
+                        t = System.nanoTime();
+
+                        bubbleSort(array4);
+
+                        t = System.nanoTime() - t;
+                        System.out.println("Randomico cenário (1000000) 0.000" + t / 100000 + "s (Bubble)");
 
                         //criação coleção ordenada
                         array1 = criarColecao(array1, 1000);
@@ -127,45 +168,6 @@ public class EDTrabalho {
                         t = System.nanoTime() - t;
                         System.out.println("Pior cenário (1000000) 0.000" + t / 100000 + "s (Bubble)");
 
-                        //criar coleção randomica
-                        array1 = randomico(array1, 1000);
-                        array2 = randomico(array2, 10000);
-                        array3 = randomico(array3, 500000);
-                        array4 = randomico(array4, 1000000);
-
-                        //Tempo para 1000
-                        t = System.nanoTime();
-
-                        bubbleSort(array1);
-
-                        t = System.nanoTime() - t;
-
-                        System.out.println("Randomico cenário (1000) " + t / 1000000000 + "s (Bubble)");
-
-                        //Tempo para 10000
-                        t = System.nanoTime();
-
-                        bubbleSort(array2);
-
-                        t = System.nanoTime() - t;
-
-                        System.out.println("Randomico cenário (10000) " + t / 1000000000 + "s (Bubble)");
-
-                        //Tempo para 500000
-                        t = System.nanoTime();
-
-                        bubbleSort(array3);
-
-                        t = System.nanoTime() - t;
-                        System.out.println("Randomico cenário (50000)" + t / 1000000000 + "s (Bubble)");
-
-                        //Tempo para 1000000
-                        t = System.nanoTime();
-
-                        bubbleSort(array4);
-
-                        t = System.nanoTime() - t;
-                        System.out.println("Randomico cenário (1000000) " + t / 1000000000 + "s (Bubble)");
 
                         break;
 
@@ -402,14 +404,14 @@ public class EDTrabalho {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
-    private static ArrayList<Integer> criarColecao(ArrayList<Integer> array1, int tamanho) {
+    private static ArrayList<Integer> criarColecao(ArrayList<Integer> array, int tamanho) {
 
         for (int i = 0; i < tamanho; i++) {
-            array1.add(i);
+            array.add(i);
 
         }
 
-        return array1;
+        return array;
 
     }
 
@@ -418,14 +420,17 @@ public class EDTrabalho {
     }
 
     private static ArrayList<Integer> randomico(ArrayList<Integer> array, int tamanho) {
+        
+        
         Random random = new Random();
 
-        for (int i = 0; i < array.size(); i++) {
+        for (int i = 0; i < tamanho; i++) {
 
             int rand = random.nextInt();
             array.add(i, rand);
 
         }
+        
 
         return array;
     }
