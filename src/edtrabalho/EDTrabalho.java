@@ -573,7 +573,7 @@ public class EDTrabalho {
 
                         System.out.println("Melhor cenário (1000)" + t / 1000000000 + "s (QuickSort)");
 
-                        //Tempo para 10000
+                        //Tempo para 10000 int
                         t = System.nanoTime();
 
                         QuickSort(array2);
