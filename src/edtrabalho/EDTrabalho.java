@@ -29,7 +29,7 @@ public class EDTrabalho {
             System.out.println("* 3- Ordenar utilizando InsertionSort;             *");
             System.out.println("* 4- Ordenar utilizando MergeSort;                 *");
             System.out.println("* 5- Ordenar utilizando QuickSort;                 *");
-            System.out.println("* 6- Ordenar utilizando __________;                *");
+            System.out.println("* 6- Ordenar utilizando NovoSort;                *");
             System.out.println("* 7- Ordenar utilizando __________;                *");
             System.out.println("* 8- Ordenar utilizando __________;                *");
             System.out.println("* 9- Ordenar utilizando __________;                *");
@@ -695,8 +695,8 @@ public class EDTrabalho {
                         break;
 
                     case 6:
-                        /*
-                        corrigindo o tamanho
+
+                        //corrigindo o tamanho
                         array1 = criarColecao(array1, 1000);
                         array2 = criarColecao(array2, 10000);
                         array3 = criarColecao(array3, 500000);
@@ -705,7 +705,7 @@ public class EDTrabalho {
                         //Tempo para 1000
                         t = System.nanoTime();
                         int tamanho = array1.size();
-                        novoSort(array1);
+                        novoSort(array1,tamanho);
 
                         t = System.nanoTime() - t;
 
@@ -713,8 +713,8 @@ public class EDTrabalho {
 
                         //Tempo para 10000
                         t = System.nanoTime();
-                        tamanho= array2;
-                        novoSort(array2,tamanho);
+                        int tamanho2= array2.size();
+                        novoSort(array2,tamanho2);
 
                         t = System.nanoTime() - t;
 
@@ -722,16 +722,16 @@ public class EDTrabalho {
 
                         //Tempo para 500000
                         t = System.nanoTime();
-                      tamanho = array3.size();
-                        novoSort(array3,tamanho);
+                      int tamanho3 = array3.size();
+                        novoSort(array3,tamanho3);
 
                         t = System.nanoTime() - t;
                         System.out.println("Melhor cenário (50000) " + t / 1000000000 + "s (novo)");
 
                         //Tempo para 1000000
                         t = System.nanoTime();
-                        tamanho= array4.size();
-                        novoSort(array4,tamanho);
+                        int tamanho4= array4.size();
+                        novoSort(array4,tamanho4);
 
                         t = System.nanoTime() - t;
                         System.out.println("Melhor cenário (1000000) " + t / 1000000000 + "s (novo)");
@@ -744,8 +744,8 @@ public class EDTrabalho {
 
                         //Tempo para 1000
                         t = System.nanoTime();
-                       tamanho= array1.size();
-                        novoSort(array1,tamanho);
+                       int tamanho01= array1.size();
+                        novoSort(array1,tamanho01);
 
                         t = System.nanoTime() - t;
 
@@ -753,8 +753,8 @@ public class EDTrabalho {
 
                         //Tempo para 10000
                         t = System.nanoTime();
-                         tamanho = array2.size();
-                        novoSort(array2,tamanho);
+                        int tamanho02 = array2.size();
+                        novoSort(array2,tamanho02);
 
                         t = System.nanoTime() - t;
 
@@ -762,19 +762,19 @@ public class EDTrabalho {
 
                         //Tempo para 500000
                         t = System.nanoTime();
-                          tamanho= array.size();
-                        novoSort(array3,tamano);
+                         int tamanho03= array3.size();
+                        novoSort(array3,tamanho03);
 
                         t = System.nanoTime() - t;
                         System.out.println("Pior cenário (50000) " + t / 1000000000 + "s (novo)");
 
                         //Tempo para 1000000
                         t = System.nanoTime();
-                       tamanho = array4.size();
-                        novoSort(array4,tamanho);
+                       int tamanho04 = array4.size();
+                        novoSort(array4,tamanho04);
 
                         t = System.nanoTime() - t;
-                        System.out.println("Pior cenário (1000000) " + t / 1000000000 + "s (novo)");*/
+                        System.out.println("Pior cenário (1000000) " + t / 1000000000 + "s (novo)");
                         break;
 
                     case 7:
@@ -883,10 +883,10 @@ public class EDTrabalho {
         return array;
     }
 
-    /*
-        Enviado por Lorayne, não executa, código será analisado
+
+        //Enviado por Lorayne, não executa, código será analisado
     private static void novoSort(ArrayList<Integer> arrayR,int tamanho) {
-        for (int atual = 1; atual <= tamanho; atual++) {
+        for (int atual = 1; atual < tamanho; atual++) {
             int analise = atual;
             while (arrayR.get(analise) < arrayR.get(analise-1)) {
                 Integer arrayAnalise = arrayR.get(analise);
@@ -897,7 +897,7 @@ public class EDTrabalho {
             }
 
         }
-    }*/
+    }
 }
 
 class MergeSort {
