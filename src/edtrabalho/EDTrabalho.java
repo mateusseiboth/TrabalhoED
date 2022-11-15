@@ -420,8 +420,7 @@ public class EDTrabalho {
                             array2 = randomico(array2, 10000);
                             array3 = randomico(array3, 500000);
                             array4 = randomico(array4, 1000000);
-                            System.out.print("Randomico: ");
-                            
+
 
                             //Tempo para 1000
                             t = System.nanoTime();
@@ -467,8 +466,7 @@ public class EDTrabalho {
                             array2 = criarColecao(array2, 10000);
                             array3 = criarColecao(array3, 500000);
                             array4 = criarColecao(array4, 1000000);
-                            System.out.print("Melhor: ");
-                           
+
 
                             //Tempo para 1000
                             t = System.nanoTime();
@@ -557,46 +555,146 @@ public class EDTrabalho {
                         break;
 
                     case 5:
+                        if (true) {
+                            //criar coleção randomica
+                            array1 = randomico(array1, 1000);
+                            array2 = randomico(array2, 10000);
+                            array3 = randomico(array3, 500000);
+                            array4 = randomico(array4, 1000000);
 
-                        //criação coleção ordenada
-                        array1 = criarColecao(array1, 1000);
-                        array2 = criarColecao(array2, 10000);
-                        array3 = criarColecao(array3, 500000);
-                        array4 = criarColecao(array4, 1000000);
+
+
+                            //Tempo para 1000
+                            t = System.nanoTime();
+
+                            QuickSort qsu = new QuickSort(array1);
+                            qsu.startQuickStart(0, array1.size()-1);
+
+                            t = System.nanoTime() - t;
+
+                            System.out.println("Randomico cenário (1000) 0.000" + t / 100000 + "s (QuickSort)");
+
+                            //Tempo para 10000
+                            t = System.nanoTime();
+
+                            QuickSort qsu2 = new QuickSort(array2);
+                            qsu2.startQuickStart(0, array2.size()-1);
+
+                            t = System.nanoTime() - t;
+
+                            System.out.println("Randomico cenário (10000) 0.000" + t / 100000 + "s (QuickSort)");
+
+                            //Tempo para 500000
+                            t = System.nanoTime();
+
+                            QuickSort qsu3 = new QuickSort(array3);
+                            qsu3.startQuickStart(0, array3.size()-1);
+
+                            t = System.nanoTime() - t;
+                            System.out.println("Randomico cenário (50000) 0.000" + t / 100000 + "s (QuickSort)");
+
+                            //Tempo para 1000000
+                            t = System.nanoTime();
+
+                            QuickSort qsu4 = new QuickSort(array4);
+                            qsu4.startQuickStart(0, array4.size()-1);
+
+                            t = System.nanoTime() - t;
+                            System.out.println("Randomico cenário (1000000) 0.000" + t / 100000 + "s(QuickSort)");
+                        }
+                        if (true) {
+                            //criação coleção ordenada
+                            array1 = criarColecao(array1, 1000);
+                            array2 = criarColecao(array2, 10000);
+                            array3 = criarColecao(array3, 500000);
+                            array4 = criarColecao(array4, 1000000);
+
+
+                            //Tempo para 1000
+                            t = System.nanoTime();
+
+                            QuickSort qsu = new QuickSort(array1);
+                            qsu.startQuickStart(0, array1.size()-1);
+
+                            t = System.nanoTime() - t;
+
+                            System.out.println("Melhor cenário (1000) 0.000" + t / 100000 + "s (QuickSort)");
+
+                            //Tempo para 10000
+                            t = System.nanoTime();
+
+                            QuickSort qsu2 = new QuickSort(array2);
+                            qsu2.startQuickStart(0, array2.size()-1);
+
+                            t = System.nanoTime() - t;
+
+                            System.out.println("Melhor cenário (10000) 0.000" + t / 100000 + "s (QuickSort)");
+
+                            //Tempo para 500000
+                            t = System.nanoTime();
+
+                            QuickSort qsu3 = new QuickSort(array3);
+                            qsu3.startQuickStart(0, array3.size()-1);
+
+                            t = System.nanoTime() - t;
+                            System.out.println("Melhor cenário (50000) 0.000" + t / 100000 + "s (QuickSort)");
+
+                            //Tempo para 1000000
+                            t = System.nanoTime();
+
+                            QuickSort qsu4 = new QuickSort(array4);
+                            qsu4.startQuickStart(0, array4.size()-1);
+
+
+                            t = System.nanoTime() - t;
+                            System.out.println("Melhor cenário (1000000) 0.000" + t / 100000 + "s (QuickSort)");
+                        }
+
+                        //reversão do Array para executar pior caso
+                        Collections.reverse(array1);
+                        Collections.reverse(array2);
+                        Collections.reverse(array3);
+                        Collections.reverse(array4);
+
 
                         //Tempo para 1000
                         t = System.nanoTime();
 
-                        QuickSort(array1);
+                        QuickSort qsu = new QuickSort(array1);
+                        qsu.startQuickStart(0, array1.size()-1);
 
                         t = System.nanoTime() - t;
 
-                        System.out.println("Melhor cenário (1000)" + t / 1000000000 + "s (QuickSort)");
+                        System.out.println("Pior cenário (1000) 0.000" + t / 100000 + "s (QuickSort)");
 
-                        //Tempo para 10000 int
+                        //Tempo para 10000
                         t = System.nanoTime();
 
-                        QuickSort(array2);
+                        QuickSort qsu2 = new QuickSort(array2);
+                        qsu2.startQuickStart(0, array2.size()-1);
 
                         t = System.nanoTime() - t;
 
-                        System.out.println("Melhor cenário (10000)" + t / 1000000000 + "s (QuickSort)");
+                        System.out.println("Pior cenário (10000) 0.000" + t / 100000 + "s (QuickSort)");
 
                         //Tempo para 500000
                         t = System.nanoTime();
 
-                        QuickSort(array3);
+                        QuickSort qsu3 = new QuickSort(array3);
+                        qsu3.startQuickStart(0, array3.size()-1);
 
                         t = System.nanoTime() - t;
-                        System.out.println("Melhor cenário (50000)" + t / 1000000000 + "s (QuickSort)");
+                        System.out.println("Pior cenário (50000) 0.000" + t / 100000 + "s (QuickSort)");
 
                         //Tempo para 1000000
                         t = System.nanoTime();
 
-                        QuickSort(array4);
+                        QuickSort qsu4 = new QuickSort(array4);
+                        qsu4.startQuickStart(0, array4.size()-1);
+
 
                         t = System.nanoTime() - t;
-                        System.out.println("Melhor cenário (1000000)" + t / 1000000000 + "s (QuickSort)");
+                        System.out.println("Pior cenário (1000000) 0.000" + t / 100000 + "s (QuickSort)");
 
                         break;
 
@@ -746,13 +844,6 @@ public class EDTrabalho {
         }
     }
 
-    private static void MergeSort(ArrayList<Integer> array1) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    private static void QuickSort(ArrayList<Integer> array1) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
 
     private static ArrayList<Integer> criarColecao(ArrayList<Integer> array, int tamanho) {
 
@@ -777,7 +868,10 @@ public class EDTrabalho {
             }
             arrayR.set(j + 1, key);
         }
+
     }
+
+
 
     private static ArrayList<Integer> randomico(ArrayList<Integer> array, int tamanho) {
 
@@ -814,10 +908,6 @@ class MergeSort {
 
     private ArrayList<Integer> inputArray;
 
-    public ArrayList<Integer> getSortedArray() {
-        return inputArray;
-    }
-
     public MergeSort(ArrayList<Integer> inputArray) {
         this.inputArray = inputArray;
     }
@@ -828,20 +918,17 @@ class MergeSort {
 
     public void divide(int startIndex, int endIndex) {
 
-        //Divide till you breakdown your list to single element
         if (startIndex < endIndex && (endIndex - startIndex) >= 1) {
             int mid = (endIndex + startIndex) / 2;
             divide(startIndex, mid);
             divide(mid + 1, endIndex);
 
-            //merging Sorted array produce above into one sorted array
             merger(startIndex, mid, endIndex);
         }
     }
 
     public void merger(int startIndex, int midIndex, int endIndex) {
 
-        //Below is the mergedarray that will be sorted array Array[i-midIndex] , Array[(midIndex+1)-endIndex]
         ArrayList<Integer> mergedSortedArray = new ArrayList<Integer>();
 
         int leftIndex = startIndex;
@@ -857,7 +944,6 @@ class MergeSort {
             }
         }
 
-        //Either of below while loop will execute
         while (leftIndex <= midIndex) {
             mergedSortedArray.add(inputArray.get(leftIndex));
             leftIndex++;
@@ -870,10 +956,73 @@ class MergeSort {
 
         int i = 0;
         int j = startIndex;
-        //Setting sorted array to original one
         while (i < mergedSortedArray.size()) {
             inputArray.set(j, mergedSortedArray.get(i++));
             j++;
         }
     }
 }
+
+ class QuickSort {
+     private static ArrayList<Integer> inputArray = new ArrayList<Integer>();
+
+     public QuickSort(ArrayList<Integer> inputArray) {
+         QuickSort.inputArray = inputArray;
+     }
+
+     public void startQuickStart(int start, int end) {
+         int q;
+         if (start < end) {
+             q = partition(start, end);
+             startQuickStart(start, q);
+             startQuickStart(q + 1, end);
+         }
+     }
+
+
+     int partition(int start, int end) {
+
+         int init = start;
+         int length = end;
+
+         Random r = new Random();
+         int pivotIndex = nextIntInRange(start, end, r);
+         int pivot = inputArray.get(pivotIndex);
+
+         while (true) {
+             while (inputArray.get(length) > pivot && length > start) {
+                 length--;
+             }
+
+             while (inputArray.get(init) < pivot && init < end) {
+                 init++;
+             }
+
+             if (init < length) {
+                 int temp;
+                 temp = inputArray.get(init);
+                 inputArray.set(init, inputArray.get(length));
+                 inputArray.set(length, temp);
+                 length--;
+                 init++;
+             } else {
+                 return length;
+             }
+         }
+
+     }
+     static int nextIntInRange(int min, int max, Random rng) {
+         if (min > max) {
+             throw new IllegalArgumentException("Erro no range [" + min + ", " + max + "].");
+         }
+         int diff = max - min;
+         if (diff >= 0 && diff != Integer.MAX_VALUE) {
+             return (min + rng.nextInt(diff + 1));
+         }
+         int i;
+         do {
+             i = rng.nextInt();
+         } while (i < min || i > max);
+         return i;
+     }
+ }
