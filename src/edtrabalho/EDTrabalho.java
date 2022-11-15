@@ -5,10 +5,6 @@ import java.util.Collections;
 import java.util.Random;
 import java.util.Scanner;
 
-/**
- *
- * @author mateusseiboth
- */
 public class EDTrabalho {
 
     public static void main(String[] args) {
