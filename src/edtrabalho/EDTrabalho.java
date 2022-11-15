@@ -420,6 +420,8 @@ public class EDTrabalho {
                             array2 = randomico(array2, 10000);
                             array3 = randomico(array3, 500000);
                             array4 = randomico(array4, 1000000);
+                            System.out.print("Randomico: ");
+                            
 
                             //Tempo para 1000
                             t = System.nanoTime();
@@ -465,6 +467,8 @@ public class EDTrabalho {
                             array2 = criarColecao(array2, 10000);
                             array3 = criarColecao(array3, 500000);
                             array4 = criarColecao(array4, 1000000);
+                            System.out.print("Melhor: ");
+                           
 
                             //Tempo para 1000
                             t = System.nanoTime();
@@ -510,6 +514,7 @@ public class EDTrabalho {
                         Collections.reverse(array2);
                         Collections.reverse(array3);
                         Collections.reverse(array4);
+                        
 
                         //Tempo para 1000
                         t = System.nanoTime();
@@ -752,7 +757,7 @@ public class EDTrabalho {
     private static ArrayList<Integer> criarColecao(ArrayList<Integer> array, int tamanho) {
 
         for (int i = 0; i < tamanho; i++) {
-            array.add(i);
+            array.set(i, i);
 
         }
 
