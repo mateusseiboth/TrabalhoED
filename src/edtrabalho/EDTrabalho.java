@@ -33,7 +33,7 @@ public class EDTrabalho {
             System.out.println("* 3- Ordenar utilizando InsertionSort;             *");
             System.out.println("* 4- Ordenar utilizando MergeSort;                 *");
             System.out.println("* 5- Ordenar utilizando QuickSort;                 *");
-            System.out.println("* 6- Ordenar utilizando __________;                *");
+            System.out.println("* 6- Ordenar utilizando Novo melhorado             *");
             System.out.println("* 7- Ordenar utilizando __________;                *");
             System.out.println("* 8- Ordenar utilizando __________;                *");
             System.out.println("* 9- Ordenar utilizando __________;                *");
@@ -46,8 +46,7 @@ public class EDTrabalho {
             } else {
                 switch (op) {
                     case 1:
-                        
-                        
+
                         //criar coleção randomica
                         array1 = randomico(array1, 1000);
                         array2 = randomico(array2, 10000);
@@ -167,7 +166,6 @@ public class EDTrabalho {
 
                         t = System.nanoTime() - t;
                         System.out.println("Pior cenário (1000000) " + t / 1000000000 + "s (Bubble)");
-
 
                         break;
 
@@ -292,8 +290,47 @@ public class EDTrabalho {
                         t = System.nanoTime() - t;
                         System.out.println("Pior cenário (1000000) " + t / 1000000000 + "s (selectionSort)");
 
-
                     case 3:
+                        //criar coleção randomica
+                        array1 = randomico(array1, 1000);
+                        array2 = randomico(array2, 10000);
+                        array3 = randomico(array3, 500000);
+                        array4 = randomico(array4, 1000000);
+
+                        //Tempo para 1000
+                        t = System.nanoTime();
+
+                        InsertionSort(array1);
+
+                        t = System.nanoTime() - t;
+
+                        System.out.println("Randomico cenário (1000) " + t / 1000000000 + "s (InsertionSort)");
+
+                        //Tempo para 10000
+                        t = System.nanoTime();
+
+                        InsertionSort(array2);
+
+                        t = System.nanoTime() - t;
+
+                        System.out.println("Randomico cenário (10000) " + t / 1000000000 + "s (InsertionSort)");
+
+                        //Tempo para 500000
+                        t = System.nanoTime();
+
+                        InsertionSort(array3);
+
+                        t = System.nanoTime() - t;
+                        System.out.println("Randomico cenário (50000) " + t / 1000000000 + "s (InsertionSort)");
+
+                        //Tempo para 1000000
+                        t = System.nanoTime();
+
+                        InsertionSort(array4);
+
+                        t = System.nanoTime() - t;
+                        System.out.println("Randomico cenário (1000000) " + t / 1000000000 + "s (InsertionSort)");
+
                         //criação coleção ordenada
                         array1 = criarColecao(array1, 1000);
                         array2 = criarColecao(array2, 10000);
@@ -307,7 +344,7 @@ public class EDTrabalho {
 
                         t = System.nanoTime() - t;
 
-                        System.out.println("Melhor cenário (1000)" + t / 1000000000 + "s (InsertionSort)");
+                        System.out.println("Melhor cenário (1000) " + t / 1000000000 + "s (InsertionSort)");
 
                         //Tempo para 10000
                         t = System.nanoTime();
@@ -316,7 +353,7 @@ public class EDTrabalho {
 
                         t = System.nanoTime() - t;
 
-                        System.out.println("Melhor cenário (10000)" + t / 1000000000 + "s (InsertionSort)");
+                        System.out.println("Melhor cenário (10000) " + t / 1000000000 + "s (InsertionSort)");
 
                         //Tempo para 500000
                         t = System.nanoTime();
@@ -324,7 +361,7 @@ public class EDTrabalho {
                         InsertionSort(array3);
 
                         t = System.nanoTime() - t;
-                        System.out.println("Melhor cenário (50000)" + t / 1000000000 + "s (InsertionSort)");
+                        System.out.println("Melhor cenário (50000) " + t / 1000000000 + "s (InsertionSort)");
 
                         //Tempo para 1000000
                         t = System.nanoTime();
@@ -332,49 +369,185 @@ public class EDTrabalho {
                         InsertionSort(array4);
 
                         t = System.nanoTime() - t;
-                        System.out.println("Melhor cenário (1000000)" + t / 1000000000 + "s (InsertionSort)");
-                        break;
+                        System.out.println("Melhor cenário (1000000) " + t / 1000000000 + "s (InsertionSort)");
 
-                    case 4:
-                        //criação coleção ordenada
-                        array1 = criarColecao(array1, 1000);
-                        array2 = criarColecao(array2, 10000);
-                        array3 = criarColecao(array3, 500000);
-                        array4 = criarColecao(array4, 1000000);
+                        //reversão do Array para executar pior caso
+                        Collections.reverse(array1);
+                        Collections.reverse(array2);
+                        Collections.reverse(array3);
+                        Collections.reverse(array4);
 
                         //Tempo para 1000
                         t = System.nanoTime();
 
-                        MergeSort(array1);
+                        InsertionSort(array1);
 
                         t = System.nanoTime() - t;
 
-                        System.out.println("Melhor cenário (1000)" + t / 1000000000 + "s (MergeSort)");
+                        System.out.println("Pior cenário (1000) " + t / 1000000000 + "s (InsertionSort)");
 
                         //Tempo para 10000
                         t = System.nanoTime();
 
-                        MergeSort(array2);
+                        InsertionSort(array2);
 
                         t = System.nanoTime() - t;
 
-                        System.out.println("Melhor cenário (10000)" + t / 1000000000 + "s (MergeSort)");
+                        System.out.println("Pior cenário (10000) " + t / 1000000000 + "s (InsertionSort)");
 
                         //Tempo para 500000
                         t = System.nanoTime();
 
-                        MergeSort(array3);
+                        InsertionSort(array3);
 
                         t = System.nanoTime() - t;
-                        System.out.println("Melhor cenário (50000)" + t / 1000000000 + "s (MergeSort)");
+                        System.out.println("Pior cenário (50000) " + t / 1000000000 + "s (InsertionSort)");
 
                         //Tempo para 1000000
                         t = System.nanoTime();
 
-                        MergeSort(array4);
+                        InsertionSort(array4);
 
                         t = System.nanoTime() - t;
-                        System.out.println("Melhor cenário (1000000)" + t / 1000000000 + "s (MergeSort)");
+                        System.out.println("Pior cenário (1000000) " + t / 1000000000 + "s (InsertionSort)");
+
+                        break;
+
+                    case 4:
+                        if (true) {
+                            //criar coleção randomica
+                            array1 = randomico(array1, 1000);
+                            array2 = randomico(array2, 10000);
+                            array3 = randomico(array3, 500000);
+                            array4 = randomico(array4, 1000000);
+
+                            //Tempo para 1000
+                            t = System.nanoTime();
+
+                            MergeSort ms = new MergeSort(array1);
+                            ms.sortGivenArray();
+
+                            t = System.nanoTime() - t;
+
+                            System.out.println("Randomico cenário (1000) 0.000" + t / 100000 + "s (MergeSort)");
+
+                            //Tempo para 10000
+                            t = System.nanoTime();
+
+                            MergeSort ms2 = new MergeSort(array2);
+                            ms2.sortGivenArray();
+
+                            t = System.nanoTime() - t;
+
+                            System.out.println("Randomico cenário (10000) 0.000" + t / 100000 + "s (MergeSort)");
+
+                            //Tempo para 500000
+                            t = System.nanoTime();
+
+                            MergeSort ms3 = new MergeSort(array3);
+                            ms3.sortGivenArray();
+
+                            t = System.nanoTime() - t;
+                            System.out.println("Randomico cenário (50000) 0.000" + t / 100000 + "s (MergeSort)");
+
+                            //Tempo para 1000000
+                            t = System.nanoTime();
+
+                            MergeSort ms4 = new MergeSort(array4);
+                            ms4.sortGivenArray();
+
+                            t = System.nanoTime() - t;
+                            System.out.println("Randomico cenário (1000000) 0.000" + t / 100000 + "s(MergeSort)");
+                        }
+                        if (true) {
+                            //criação coleção ordenada
+                            array1 = criarColecao(array1, 1000);
+                            array2 = criarColecao(array2, 10000);
+                            array3 = criarColecao(array3, 500000);
+                            array4 = criarColecao(array4, 1000000);
+
+                            //Tempo para 1000
+                            t = System.nanoTime();
+
+                            MergeSort ms = new MergeSort(array1);
+                            ms.sortGivenArray();
+
+                            t = System.nanoTime() - t;
+
+                            System.out.println("Melhor cenário (1000) 0.000" + t / 100000 + "s (MergeSort)");
+
+                            //Tempo para 10000
+                            t = System.nanoTime();
+
+                            MergeSort ms2 = new MergeSort(array2);
+                            ms2.sortGivenArray();
+
+                            t = System.nanoTime() - t;
+
+                            System.out.println("Melhor cenário (10000) 0.000" + t / 100000 + "s (MergeSort)");
+
+                            //Tempo para 500000
+                            t = System.nanoTime();
+
+                            MergeSort ms3 = new MergeSort(array3);
+                            ms3.sortGivenArray();
+
+                            t = System.nanoTime() - t;
+                            System.out.println("Melhor cenário (50000) 0.000" + t / 100000 + "s (MergeSort)");
+
+                            //Tempo para 1000000
+                            t = System.nanoTime();
+
+                            MergeSort ms4 = new MergeSort(array4);
+                            ms4.sortGivenArray();
+
+                            t = System.nanoTime() - t;
+                            System.out.println("Melhor cenário (1000000) 0.000" + t / 100000 + "s (MergeSort)");
+                        }
+
+                        //reversão do Array para executar pior caso
+                        Collections.reverse(array1);
+                        Collections.reverse(array2);
+                        Collections.reverse(array3);
+                        Collections.reverse(array4);
+
+                        //Tempo para 1000
+                        t = System.nanoTime();
+
+                        MergeSort ms = new MergeSort(array1);
+                        ms.sortGivenArray();
+
+                        t = System.nanoTime() - t;
+
+                        System.out.println("Pior cenário (1000) 0.000" + t / 100000 + "s (MergeSort)");
+
+                        //Tempo para 10000
+                        t = System.nanoTime();
+
+                        MergeSort ms2 = new MergeSort(array2);
+                        ms2.sortGivenArray();
+
+                        t = System.nanoTime() - t;
+
+                        System.out.println("Pior cenário (10000) 0.000" + t / 100000 + "s (MergeSort)");
+
+                        //Tempo para 500000
+                        t = System.nanoTime();
+
+                        MergeSort ms3 = new MergeSort(array3);
+                        ms3.sortGivenArray();
+
+                        t = System.nanoTime() - t;
+                        System.out.println("Pior cenário (50000) 0.000" + t / 100000 + "s (MergeSort)");
+
+                        //Tempo para 1000000
+                        t = System.nanoTime();
+
+                        MergeSort ms4 = new MergeSort(array4);
+                        ms4.sortGivenArray();
+
+                        t = System.nanoTime() - t;
+                        System.out.println("Pior cenário (1000000) 0.000" + t / 100000 + "s (MergeSort)");
 
                         break;
 
@@ -423,8 +596,86 @@ public class EDTrabalho {
                         break;
 
                     case 6:
+                        /*
+                        Em analise de execução
+                        array1 = criarColecao(array1, 1000);
+                        array2 = criarColecao(array2, 10000);
+                        array3 = criarColecao(array3, 500000);
+                        array4 = criarColecao(array4, 1000000);
 
-                        //ToDo
+                        //Tempo para 1000
+                        t = System.nanoTime();
+
+                        novoSort(array1);
+
+                        t = System.nanoTime() - t;
+
+                        System.out.println("Melhor cenário (1000) " + t / 1000000000 + "s (novo)");
+
+                        //Tempo para 10000
+                        t = System.nanoTime();
+
+                        novoSort(array2);
+
+                        t = System.nanoTime() - t;
+
+                        System.out.println("Melhor cenário (10000) " + t / 1000000000 + "s (novo)");
+
+                        //Tempo para 500000
+                        t = System.nanoTime();
+
+                        novoSort(array3);
+
+                        t = System.nanoTime() - t;
+                        System.out.println("Melhor cenário (50000) " + t / 1000000000 + "s (novo)");
+
+                        //Tempo para 1000000
+                        t = System.nanoTime();
+
+                        novoSort(array4);
+
+                        t = System.nanoTime() - t;
+                        System.out.println("Melhor cenário (1000000) " + t / 1000000000 + "s (novo)");
+
+                        //reversão do Array para executar pior caso
+                        Collections.reverse(array1);
+                        Collections.reverse(array2);
+                        Collections.reverse(array3);
+                        Collections.reverse(array4);
+
+                        //Tempo para 1000
+                        t = System.nanoTime();
+
+                        novoSort(array1);
+
+                        t = System.nanoTime() - t;
+
+                        System.out.println("Pior cenário (1000) " + t / 1000000000 + "s (novo)");
+
+                        //Tempo para 10000
+                        t = System.nanoTime();
+
+                        novoSort(array2);
+
+                        t = System.nanoTime() - t;
+
+                        System.out.println("Pior cenário (10000) " + t / 1000000000 + "s (novo)");
+
+                        //Tempo para 500000
+                        t = System.nanoTime();
+
+                        novoSort(array3);
+
+                        t = System.nanoTime() - t;
+                        System.out.println("Pior cenário (50000) " + t / 1000000000 + "s (novo)");
+
+                        //Tempo para 1000000
+                        t = System.nanoTime();
+
+                        novoSort(array4);
+
+                        t = System.nanoTime() - t;
+                        System.out.println("Pior cenário (1000000) " + t / 1000000000 + "s (novo)");*/
                         break;
 
                     case 7:
@@ -459,10 +710,10 @@ public class EDTrabalho {
         for (int i = 0; i < arrayR.size() - 1; i++) {
             controle = true;
             for (int j = 0; j < arrayR.size() - i - 1; j++) {
-                if (arrayR.get(j) > arrayR.get(j+1)) {
+                if (arrayR.get(j) > arrayR.get(j + 1)) {
                     tmp = arrayR.get(j);
-                    arrayR.set(j, arrayR.get(j+1));
-                    arrayR.set(j+1, tmp);
+                    arrayR.set(j, arrayR.get(j + 1));
+                    arrayR.set(j + 1, tmp);
                     controle = false;
                 }
             }
@@ -474,23 +725,21 @@ public class EDTrabalho {
     }
 
     private static void selectionSort(ArrayList<Integer> arrayR) {
-        
-        
+
         for (int i = 0; i < arrayR.size() - 1; i++) {
-			int minIndex = i;
+            int minIndex = i;
 
-			for (int j = i + 1; j < arrayR.size(); j++) {
-				if (arrayR.get(j) < arrayR.get(minIndex)) {
-					minIndex = j;
-				}
-			}
+            for (int j = i + 1; j < arrayR.size(); j++) {
+                if (arrayR.get(j) < arrayR.get(minIndex)) {
+                    minIndex = j;
+                }
+            }
 
-			int temp = arrayR.get(minIndex);
-                        arrayR.set(minIndex, arrayR.get(i));
-			arrayR.set(i, temp);
-		}
-	}
-    
+            int temp = arrayR.get(minIndex);
+            arrayR.set(minIndex, arrayR.get(i));
+            arrayR.set(i, temp);
+        }
+    }
 
     private static void MergeSort(ArrayList<Integer> array1) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
@@ -511,13 +760,22 @@ public class EDTrabalho {
 
     }
 
-    private static void InsertionSort(ArrayList<Integer> array1) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    private static void InsertionSort(ArrayList<Integer> arrayR) {
+        for (int i = 1; i < arrayR.size(); ++i) {
+            int key = arrayR.get(i);
+            int j = i - 1;
+
+            while (j >= 0 && arrayR.get(j) > key) {
+                arrayR.set(j + 1, arrayR.get(j));
+
+                j -= 1;
+            }
+            arrayR.set(j + 1, key);
+        }
     }
 
     private static ArrayList<Integer> randomico(ArrayList<Integer> array, int tamanho) {
-        
-        
+
         Random random = new Random();
 
         for (int i = 0; i < tamanho; i++) {
@@ -526,9 +784,91 @@ public class EDTrabalho {
             array.add(i, rand);
 
         }
-        
 
         return array;
     }
 
+    /*
+        Enviado por Lorayne, não executa, código será analisado
+    private static void novoSort(ArrayList<Integer> arrayR) {
+        for (int atual = 0; atual < arrayR.size() - 1; atual++) {
+            int analise = atual;
+            while (arrayR.get(analise) < arrayR.get(analise - 1)) {
+                Integer arrayAnalise = arrayR.get(analise);
+                Integer arrayAnaliseMenosUm = arrayR.get(analise - 1);
+                arrayR.set(analise, arrayAnaliseMenosUm);
+                arrayR.set(analise - 1, arrayAnalise);
+
+            }
+
+        }
+    }*/
+}
+
+class MergeSort {
+
+    private ArrayList<Integer> inputArray;
+
+    public ArrayList<Integer> getSortedArray() {
+        return inputArray;
+    }
+
+    public MergeSort(ArrayList<Integer> inputArray) {
+        this.inputArray = inputArray;
+    }
+
+    public void sortGivenArray() {
+        divide(0, this.inputArray.size() - 1);
+    }
+
+    public void divide(int startIndex, int endIndex) {
+
+        //Divide till you breakdown your list to single element
+        if (startIndex < endIndex && (endIndex - startIndex) >= 1) {
+            int mid = (endIndex + startIndex) / 2;
+            divide(startIndex, mid);
+            divide(mid + 1, endIndex);
+
+            //merging Sorted array produce above into one sorted array
+            merger(startIndex, mid, endIndex);
+        }
+    }
+
+    public void merger(int startIndex, int midIndex, int endIndex) {
+
+        //Below is the mergedarray that will be sorted array Array[i-midIndex] , Array[(midIndex+1)-endIndex]
+        ArrayList<Integer> mergedSortedArray = new ArrayList<Integer>();
+
+        int leftIndex = startIndex;
+        int rightIndex = midIndex + 1;
+
+        while (leftIndex <= midIndex && rightIndex <= endIndex) {
+            if (inputArray.get(leftIndex) <= inputArray.get(rightIndex)) {
+                mergedSortedArray.add(inputArray.get(leftIndex));
+                leftIndex++;
+            } else {
+                mergedSortedArray.add(inputArray.get(rightIndex));
+                rightIndex++;
+            }
+        }
+
+        //Either of below while loop will execute
+        while (leftIndex <= midIndex) {
+            mergedSortedArray.add(inputArray.get(leftIndex));
+            leftIndex++;
+        }
+
+        while (rightIndex <= endIndex) {
+            mergedSortedArray.add(inputArray.get(rightIndex));
+            rightIndex++;
+        }
+
+        int i = 0;
+        int j = startIndex;
+        //Setting sorted array to original one
+        while (i < mergedSortedArray.size()) {
+            inputArray.set(j, mergedSortedArray.get(i++));
+            j++;
+        }
+    }
 }
