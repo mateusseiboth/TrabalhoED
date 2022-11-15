@@ -602,7 +602,7 @@ public class EDTrabalho {
 
                     case 6:
                         /*
-                        Em analise de execução
+                        corrigindo o tamanho
                         array1 = criarColecao(array1, 1000);
                         array2 = criarColecao(array2, 10000);
                         array3 = criarColecao(array3, 500000);
@@ -610,7 +610,7 @@ public class EDTrabalho {
 
                         //Tempo para 1000
                         t = System.nanoTime();
-
+                        int tamanho = array1.size();
                         novoSort(array1);
 
                         t = System.nanoTime() - t;
@@ -619,8 +619,8 @@ public class EDTrabalho {
 
                         //Tempo para 10000
                         t = System.nanoTime();
-
-                        novoSort(array2);
+                        tamanho= array2;
+                        novoSort(array2,tamanho);
 
                         t = System.nanoTime() - t;
 
@@ -628,16 +628,16 @@ public class EDTrabalho {
 
                         //Tempo para 500000
                         t = System.nanoTime();
-
-                        novoSort(array3);
+                      tamanho = array3.size();
+                        novoSort(array3,tamanho);
 
                         t = System.nanoTime() - t;
                         System.out.println("Melhor cenário (50000) " + t / 1000000000 + "s (novo)");
 
                         //Tempo para 1000000
                         t = System.nanoTime();
-
-                        novoSort(array4);
+                        tamanho= array4.size();
+                        novoSort(array4,tamanho);
 
                         t = System.nanoTime() - t;
                         System.out.println("Melhor cenário (1000000) " + t / 1000000000 + "s (novo)");
@@ -650,8 +650,8 @@ public class EDTrabalho {
 
                         //Tempo para 1000
                         t = System.nanoTime();
-
-                        novoSort(array1);
+                       tamanho= array1.size();
+                        novoSort(array1,tamanho);
 
                         t = System.nanoTime() - t;
 
@@ -659,8 +659,8 @@ public class EDTrabalho {
 
                         //Tempo para 10000
                         t = System.nanoTime();
-
-                        novoSort(array2);
+                         tamanho = array2.size();
+                        novoSort(array2,tamanho);
 
                         t = System.nanoTime() - t;
 
@@ -668,16 +668,16 @@ public class EDTrabalho {
 
                         //Tempo para 500000
                         t = System.nanoTime();
-
-                        novoSort(array3);
+                          tamanho= array.size();
+                        novoSort(array3,tamano);
 
                         t = System.nanoTime() - t;
                         System.out.println("Pior cenário (50000) " + t / 1000000000 + "s (novo)");
 
                         //Tempo para 1000000
                         t = System.nanoTime();
-
-                        novoSort(array4);
+                       tamanho = array4.size();
+                        novoSort(array4,tamanho);
 
                         t = System.nanoTime() - t;
                         System.out.println("Pior cenário (1000000) " + t / 1000000000 + "s (novo)");*/
@@ -795,10 +795,10 @@ public class EDTrabalho {
 
     /*
         Enviado por Lorayne, não executa, código será analisado
-    private static void novoSort(ArrayList<Integer> arrayR) {
-        for (int atual = 0; atual < arrayR.size() - 1; atual++) {
+    private static void novoSort(ArrayList<Integer> arrayR,int tamanho) {
+        for (int atual = 1; atual <= tamanho; atual++) {
             int analise = atual;
-            while (arrayR.get(analise) < arrayR.get(analise - 1)) {
+            while (arrayR.get(analise) < arrayR.get(analise-1)) {
                 Integer arrayAnalise = arrayR.get(analise);
                 Integer arrayAnaliseMenosUm = arrayR.get(analise - 1);
                 arrayR.set(analise, arrayAnaliseMenosUm);
