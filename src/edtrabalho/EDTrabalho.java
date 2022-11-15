@@ -695,6 +695,11 @@ public class EDTrabalho {
                         break;
 
                     case 6:
+                        array1 = randomico(array1, 1000);
+                        array2 = randomico(array2, 10000);
+                        array3 = randomico(array3, 500000);
+                        array4 = randomico(array4, 1000000);
+
 
                         //corrigindo o tamanho
                         array1 = criarColecao(array1, 1000);
