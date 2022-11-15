@@ -33,7 +33,7 @@ public class EDTrabalho {
             System.out.println("* 3- Ordenar utilizando InsertionSort;             *");
             System.out.println("* 4- Ordenar utilizando MergeSort;                 *");
             System.out.println("* 5- Ordenar utilizando QuickSort;                 *");
-            System.out.println("* 6- Ordenar utilizando Novo melhorado             *");
+            System.out.println("* 6- Ordenar utilizando __________;                *");
             System.out.println("* 7- Ordenar utilizando __________;                *");
             System.out.println("* 8- Ordenar utilizando __________;                *");
             System.out.println("* 9- Ordenar utilizando __________;                *");
