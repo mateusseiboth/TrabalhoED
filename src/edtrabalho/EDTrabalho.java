@@ -42,7 +42,6 @@ public class EDTrabalho {
             } else {
                 switch (op) {
                     case 1:
-
                         //criar coleção randomica
                         array1 = randomico(array1, 1000);
                         array2 = randomico(array2, 10000);
@@ -285,7 +284,7 @@ public class EDTrabalho {
 
                         t = System.nanoTime() - t;
                         System.out.println("Pior cenário (1000000) " + t / 1000000000 + "s (selectionSort)");
-
+                        break;
                     case 3:
                         //criar coleção randomica
                         array1 = randomico(array1, 1000);
@@ -873,13 +872,23 @@ public class EDTrabalho {
 
         Random random = new Random();
 
-        for (int i = 0; i < tamanho; i++) {
+        if (array.size() == 0 ) {
+            for (int i = 0; i < tamanho; i++) {
+                int rand = random.nextInt();
+                array.add(i, rand);
 
-            int rand = random.nextInt();
-            array.add(i, rand);
+            }
 
+
+        } else {
+
+            for (int i = 0; i < tamanho; i++) {
+                int rand = random.nextInt();
+
+                array.set(i, rand);
+
+            }
         }
-
         return array;
     }
 
