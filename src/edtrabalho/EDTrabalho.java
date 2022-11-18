@@ -15,11 +15,8 @@ public class EDTrabalho {
 
         Scanner entrada = new Scanner(System.in);
 
-        Random gerador = new Random();
-
         long t;
-
-        int op = 0;
+        int op;
 
         do {
 
@@ -804,7 +801,7 @@ public class EDTrabalho {
 
     private static void bubbleSort(ArrayList<Integer> arrayR) {
         boolean controle = false;
-        int tmp = 0;
+        int tmp;
         for (int i = 0; i < arrayR.size() - 1; i++) {
             controle = true;
             for (int j = 0; j < arrayR.size() - i - 1; j++) {
@@ -815,7 +812,7 @@ public class EDTrabalho {
                     controle = false;
                 }
             }
-            if (controle == true) {
+            if (controle) {
                 break;
             }
         }
