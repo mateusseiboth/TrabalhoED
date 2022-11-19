@@ -5,6 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="38c7ab46-8ff7-447f-93b3-0d2635de42cb" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TrabalhoED/edtrabalho/EDTrabalho.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TrabalhoED/edtrabalho/EDTrabalho.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TrabalhoED/edtrabalho/MergeSort.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TrabalhoED/edtrabalho/MergeSort.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edtrabalho/EDTrabalho.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edtrabalho/EDTrabalho.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,12 +31,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "/home/loraynevieirati/IdeaProjects/TrabalhoED.git"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -57,7 +61,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668529949230</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Atualizando a opcao 6 metodo novoSort">
+      <created>1668530694713</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1668530694713</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -87,6 +98,7 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="teste" />
-    <option name="LAST_COMMIT_MESSAGE" value="teste" />
+    <MESSAGE value="Atualizando a opcao 6 metodo novoSort" />
+    <option name="LAST_COMMIT_MESSAGE" value="Atualizando a opcao 6 metodo novoSort" />
   </component>
 </project>

@@ -784,7 +784,40 @@ public class EDTrabalho {
 
                     case 7:
 
-                        //ToDo
+
+                        array1 = randomico(array1, 1000);
+                        array2 = randomico(array2, 10000);
+                        array3 = randomico(array3, 500000);
+                        array4 = randomico(array4, 1000000);
+
+
+
+                        HeapSort Hps = new HeapSort(array1);
+                        int n = array1.size();
+                        for (int i = n/2 -1; i >=0 ; i--) {
+                            Hps.InicioHS(array1,n,i);
+                        }
+                        System.out.println("Quase ordenado ");
+                        for (int i =0;i<array1.size();i++){
+                            System.out.println(array1.get(i));
+                        }
+
+                        for (int j = n-1; j > 0 ; j--) {
+                            int aux = array1.get(0);
+                            array1.set(0,array1.get(j));
+                            array1.set(j,aux);
+                            Hps.InicioHS(array1,j,0);
+                        }
+
+
+
+                        array1 = criarColecao(array1, 1000);
+                        array2 = criarColecao(array2, 10000);
+                        array3 = criarColecao(array3, 500000);
+                        array4 = criarColecao(array4, 1000000);
+
+
+
                         break;
 
                     case 8:
@@ -903,7 +936,13 @@ public class EDTrabalho {
 
         }
     }
+
+
+
+
 }
+
+
 
 class MergeSort {
 
@@ -1025,5 +1064,40 @@ class MergeSort {
              i = rng.nextInt();
          } while (i < min || i > max);
          return i;
+     }
+ }
+
+ class HeapSort {
+     private static ArrayList<Integer> HS = new ArrayList<Integer>();
+
+     public HeapSort(ArrayList<Integer> ArrayH) {
+         HeapSort.HS = ArrayH;
+     }
+
+
+     public static void InicioHS(ArrayList array, int n, int i) {
+
+         int raiz = i;
+         int esquerda = 2 * i + 1;
+         int direita = 2 * i + 2;
+
+         if (esquerda < n && HS.get(esquerda) > HS.get(raiz)) {
+             raiz = esquerda;
+
+         }
+         if (direita < n && HS.get(direita) > HS.get(raiz)) {
+             raiz = direita;
+
+
+         }
+
+         if (raiz != i) {
+             int aux = HS.get(i);
+             HS.set(i, raiz);
+             HS.set(raiz, aux);
+             InicioHS(array, n, raiz);
+         }
+
+
      }
  }
