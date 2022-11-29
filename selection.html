@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>SpeedAlg.net</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/all.css" rel="stylesheet" />
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+</head>
+
+<body class="col-md-12">
+    <div>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">SpeedAlg</a>
+                </li>
+            </ul>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="bubble.html">BubbleSort</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="selection.html">SelectionSort</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="insert.html">InsertSort</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="merge.html">Merge</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+
+    <div class="card">
+        <div class="container-fluid d-flex">
+            <div class="col-md-6 justify-content-left">
+                <h1>SelectionSort</h1>
+                <p>A ordenação por seleção (do inglês, selection sort) é um algoritmo de ordenação baseado em se passar sempre o menor valor do vetor para a primeira posição (ou o maior dependendo da ordem requerida), depois o de segundo menor valor para a segunda posição, e assim é feito sucessivamente com os <b>n-1</b> elementos restantes, até os últimos dois elementos.</p>
+                <p>É composto por dois laços, um laço externo e outro interno. O laço externo serve para controlar o índice inicial e o interno percorre todo o vetor. Na primeira iteração do laço externo o índice começa de 0 e cada iteração ele soma uma unidade até o final do vetor e o laço mais interno percorre o vetor começando desse índice externo + 1 até o final do vetor</p>
+                <p>O selection sort compara a cada interação um elemento com os outros, visando encontrar o menor. Dessa forma, podemos entender que não existe um melhor caso mesmo que o vetor esteja ordenado ou em ordem inversa serão executados os dois laços do algoritmo, o externo e o interno. A complexidade deste algoritmo será sempre <b>O(n^2)</b></p>
+            </div>    
+            <div class="col-md-6 justify-content-right">
+                </br>
+                </br>
+                </br>
+                <img src="img/selection.png" width="388" height="291">
+
+            </div>
+
+        </div>
+        
+    </div>
+    <div class="card">
+        <div class="container-fluid d-flex">
+            <div class="col-md-12 justify-content-left"> 
+                <h1>Gráficos com tempos de execução do Selection</h1>
+                <img src="img/selection_melhor.png">
+                <img src="img/selection_random.png">
+                <img src="img/selection_pior.png">
+
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+</body>
+
+</html>
