@@ -95,7 +95,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668895774208</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="implementação do metodo HeapSort e ShellSort">
+      <created>1669339123706</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1669339123706</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -127,6 +134,7 @@
     <MESSAGE value="teste" />
     <MESSAGE value="Atualizando a opcao 6 metodo novoSort" />
     <MESSAGE value="implementação do metodo Heap Sort , ainda não finalizado" />
-    <option name="LAST_COMMIT_MESSAGE" value="implementação do metodo Heap Sort , ainda não finalizado" />
+    <MESSAGE value="implementação do metodo HeapSort e ShellSort" />
+    <option name="LAST_COMMIT_MESSAGE" value="implementação do metodo HeapSort e ShellSort" />
   </component>
 </project>
