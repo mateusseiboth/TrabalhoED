@@ -12,7 +12,7 @@
 
     <style>
         div[name="corpo"] {
-            background-image: url('img/bucket.jpg');
+            background-image: url('img/counting_back.jpg');
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: cover;
@@ -60,10 +60,10 @@
                         <a class="nav-link " href="cocktail.html">Cocktail sort</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="bucket.html">Bucket Sort</a>
+                        <a class="nav-link" href="bucket.html">Bucket Sort</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="counting.html">Counting sort</a>
+                        <a class="nav-link active" href="counting.html">Counting sort</a>
                     </li>
                 </ul>
             </div>
@@ -76,17 +76,17 @@
 
     <div class="card" name="corpo">
         <div class="container-fluid d-flex">
-            <div class="col-md-6 justify-content-left" style="color: white;">
-                <h1>Bucket Sort</h1>
-                <p>Bucket sort, ou bin sort, é um algoritmo de ordenação que funciona dividindo um vetor em um número finito de recipientes.</p>
-                <p>Cada recipiente é então ordenado individualmente, seja usando um algoritmo de ordenação diferente, ou usando o algoritmo bucket sort recursivamente.</p>
-                <p>O Bucket Sort tem complexidade linear Θ(n) quando o vetor a ser ordenado contém valores que são uniformemente distribuídos</p>
+            <div class="col-md-6 justify-content-left">
+                <h1>Counting Sort</h1>
+                <p>Counting sort é um algoritmo de ordenação estável cuja complexidade é <b>O(n)</b>. As chaves podem tomar valores entre 0 e M-1. Se existirem k0 chaves com valor 0, então ocupam as primeiras k0 posições do vetor final: de 0 a k0-1. A ideia
+                    básica do counting sort é determinar, para cada entrada x, o número de elementos menor que x. Essa informação pode ser usada para colocar o elemento x diretamente em sua posição no array de saída. Por exemplo, se há 17 elementos menores
+                    que x, então x pertence a posição 18. Esse esquema deve ser ligeiramente modificado quando houver vários elementos com o mesmo valor, uma vez que nós não queremos que sejam colocados na mesma posição</p>
             </div>
             <div class="col-md-6 justify-content-right">
                 </br>
                 </br>
                 </br>
-                <img src="img/bucket.png" width="388" height="291">
+                <img src="img/counting.png" width="388" height="291">
 
             </div>
 
