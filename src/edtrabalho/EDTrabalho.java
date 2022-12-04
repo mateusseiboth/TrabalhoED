@@ -31,7 +31,7 @@ public class EDTrabalho {
             System.out.println("* 5- Ordenar utilizando QuickSort;                 *");
             System.out.println("* 6- Ordenar utilizando BucketSort;                *");
             System.out.println("* 7- Ordenar utilizando HeapSort;                *");
-            System.out.println("* 8- Ordenar utilizando CountingSort;                *");
+            System.out.println("* 8- Ordenar utilizando  couting sort;                *");
             System.out.println("* 9- Ordenar utilizando ShellSort;                *");
             System.out.println("* 10- Ordenar utilizando cocktail;               *");
             System.out.println("======================©2022=========================");
@@ -948,6 +948,8 @@ public class EDTrabalho {
                 break;
 
                     case 8:
+
+
                         //criar coleção randomica
                         array1 = randomico(array1, 1000);
                         array2 = randomico(array2, 10000);
@@ -1369,34 +1371,35 @@ public static void bucket_sort(ArrayList<Integer> arr)
 
 
 
-
-
-
-
-
-
-
-
     public static void countingSort(ArrayList<Integer> vetor){
-        ArrayList<Integer> contagem = new ArrayList<>();
-        ArrayList<Integer> ordena = new ArrayList<>();
-
+        vetor = randomico(vetor, 1000);
         int maior = vetor.get(0);
         for (int i = 1; i < vetor.size(); i++) {
             if (vetor.get(i) > maior) {
                 maior = vetor.get(i);
             }
         }
+       // int mudarTamanho =maior+1 ;mudarTamanho tamanho
 
+        ArrayList<Integer> c = new ArrayList<>();
+        c = randomico(c, 1000);
+        int cont =0;
         for (int i = 0; i < vetor.size()-1; i++) {
-            contagem.set(vetor.get(i),vetor.get(i+1));
+            c.set(vetor.get(i),cont++);
+
         }
+        int cont2 =0;
+        for (int i = 1; i < c.size(); i++) {
+            cont2=c.get(i-1)+1;
+            c.set(i,cont2);
+        }
+        int tamanho = vetor.size();
+        ArrayList<Integer> b = new ArrayList<>();
 
+        for (int i = b.size()-1; i >=0 ; i--) {
+            b.set(c.get(vetor.get(i))-1, vetor.get(i));
+             c.set(vetor.get(i),-1);
 
-
-        for (int i = ordena.size(); i >=0 ; i--) {
-            ordena.set(contagem.get(vetor.get(i))-1, vetor.get(i));
-             contagem.set(vetor.get(i),vetor.get(i-1));
 
         }
 
@@ -1579,19 +1582,7 @@ public static void bucket_sort(ArrayList<Integer> arr)
 
 
 
-    private static void novoSort(ArrayList<Integer> arrayR,int tamanho) {
-        for (int atual = 1; atual < tamanho; atual++) {
-            int analise = atual;
-            while (arrayR.get(analise) < arrayR.get(analise-1)) {
-                Integer arrayAnalise = arrayR.get(analise);
-                Integer arrayAnaliseMenosUm = arrayR.get(analise - 1);
-                arrayR.set(analise, arrayAnaliseMenosUm);
-                arrayR.set(analise - 1, arrayAnalise);
 
-            }
-
-        }
-    }
 
 
 
